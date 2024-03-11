@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div>
+        <div class="logo">
+            <img src="assets/images/logo.png" width="100" height="100" />
+        </div>
+    </div>
+
+    <div class="bar"></div>
+
+    <div class="content">
+        <div class="sidebar">
+            <h2>Clojure</h2>
+            <ul>
+                <li><a href="#">Links</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#historia">História e processo de desenvolvimento</a></li>
+                <li><a href="#design">Filosofia do design</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#popularidade">Plataformas e popularidade</a></li>
+            </ul>
+        </div>
+
+        <div class="main" id = "inicio">
+            <p>Clojure é um dialeto da linguagem de programação <a href="https://pt.wikipedia.org/wiki/Lisp">Lisp</a>
+                criado por Rich Hickey<sup><a href="http://">[1]</a></sup> . Clojure é uma linguagem de programação de
+                propósito geral com ênfase em programação funcional[2]. É executada na Máquina Virtual Java (JVM) por
+                padrão, mas existem versões alternativas para outros ambientes de execução, como Clojure CLR[3], que
+                compila código para a plataforma .NET e ClojureScript[4], que compila código Clojure para JavaScript.
+                Como outros Lisps, Clojure trata código como dados e tem um sistema de macros integrado. O processo de
+                desenvolvimento atual é conduzido pela comunidade e supervisionado por Rich Hickey como seu ditador
+                benevolente perpétuo[5] (BDFL em inglês).</p>
+            <p>Clojure é uma linguagem de programação de propósito geral com ênfase em programação funcional<a
+                    href="#n2"><sup>[2]</sup></a>. É executada na Máquina Virtual Java (JVM) por padrão, mas existem
+                versões alternativas para outros ambientes de execução, como Clojure CLR<a
+                    href="#n3"><sup>[3]</sup></a>, que compila código para a plataforma .NET e ClojureScript<a
+                    href="#n4"><sup>[4]</sup></a>, que compila código Clojure para JavaScript. Como outros Lisps,
+                Clojure trata código como dados e tem um sistema de macros integrado. O processo de desenvolvimento
+                atual é conduzido pela comunidade e supervisionado por Rich Hickey como seu ditador benevolente
+                perpétuo<a href="#n5"><sup>[5]</sup></a>.</p>
+
+            <p>Clojure incentiva imutabilidade e estruturas de dados imutáveis. Enquanto o seu sistema de tipos é
+                totalmente dinâmico esforços recentes também têm procurado a implementação gradual de tipagem forte.
+                Clojure incentiva programadores a serem explícitos sobre o gerenciamento de estado e identidade. Este
+                foco em programação com valores imutáveis e explícitos no decorrer do tempo se destina a facilitar o
+                desenvolvimento de programas mais robustos, especialmente os vários segmentos.</p>
+
+            <p>Clojure é utilizada com sucesso na indústria por empresas como Walmart, Puppet Labs<a
+                    href="#n6"><sup>[6]</sup></a> e outras empresas de software de grande porte. O suporte comercial
+                para Clojure é fornecido pela Cognitect, que faz parte do grupo Nubank<a href="#n7"><sup>[7]</sup></a>.
+                A última versão estável da linguagem Clojure é a 1.10, lançada em 17 de dezembro de 2018. A primeira
+                versão estável foi a versão 1.0, lançada em 4 de maio de 2009. Clojure é um software livre disponível
+                pela Eclipse Public License<a href="#n8"><sup>[8]</sup></a>.</p>
+            <div id="historia">
+                <h3>História e processo de desenvolvimento</h3>
+                <hr>
+                <p>Rich Hickey é o criador da linguagem de programação Clojure<a href="#n1"><sup>[1]</sup></a>. Antes de
+                    desenvolver a linguagem Clojure ele trabalhou na dotLisp, um projeto semelhante com base na
+                    plataforma
+                    .NET. Ele também desenvolveu a interface jfli (uma espécie de ponte para usar recursos do Java para
+                    Common Lisp), FOIL (uma interface de objetos externos para Lisp) e Lisplets (uma interface amigável
+                    do
+                    Lisp para Java Servlets). Esses projetos eram tentativas anteriores para criar algum tipo de
+                    interoperabilidade entre Lisp e Java. Hickey gastou cerca de 2 anos e meio trabalhando na linguagem
+                    Clojure antes de lançá-la publicamente, muito desse tempo trabalhando exclusivamente na linguagem,
+                    sem
+                    nenhum financiamento externo. No final deste período Hickey enviou um e-mail anunciando a linguagem
+                    a
+                    alguns amigos na comunidade Common Lisp. O processo de desenvolvimento é voltado para a comunidade e
+                    o
+                    desenvolvimento é gerenciado no site da comunidade Clojure. O site contém documentos de planeamento
+                    e um
+                    rastreador de problemas onde bugs podem ser reportados. Discussões gerais sobre o desenvolvimento
+                    acontecem no Google Groups (em inglês). Enquanto qualquer um pode enviar relatórios de erros e
+                    ideias,
+                    para contribuir com correções é preciso assinar o acordo de contribuição Clojure<a
+                        href="#n9"><sup>[9]</sup></a>, os bilhetes JIRA são processados ​​por uma equipe de triagem e,
+                    finalmente, Rich Hickey aprova as alterações<a href="#n5"><sup>[5]</sup></a>.</p>
+            </div>
+
+            <div id="design">
+                <hr>
+                <h3>Filosofia do design</h3>
+                <p>Rich Hickey desenvolveu a linguagem Clojure por desejar uma versão moderna da linguagem Lisp para
+                    programação funcional<a href="#n10"><sup>[10]</sup></a>, simbiótica com a já estabelecida plataforma
+                    Java<a href="#n11"><sup>[11]</sup></a>, e desenhada para computação concorrente.</p>
+                <p>A abordagem adotada na linguagem Clojure para a manipulação de estados é caracterizada pelo conceito
+                    de
+                    identidades, estas representadas por uma série de estados imutáveis com o decorrer do tempo. Como os
+                    estados são valores imutáveis, um número indefinido de processos pode operar sobre os mesmos em
+                    paralelo, e a concorrência se torna uma questão de gerenciar as mudanças de um estado para o outro.
+                    Para
+                    esse propósito a linguagem fornece muitos tipos mutáveis, com uma semântica bem definida que permite
+                    controlar a transição entre os estados de forma eficiente.</p>
+
+            </div>
+                <div id="caracteristicas">
+                    <hr>
+                    <h3>Características</h3>
+                    <p>O código Clojure é executado na máquina virtual Java e como resultado se integra com o ambiente
+                        Java
+                        permitindo invocar código Java a partir do código Clojure, assim como código Clojure também pode
+                        ser
+                        invocado a partir de código Java<a href="#n10"><sup>[10]</sup></a>. A comunidade utiliza a
+                        ferramenta Leiningen para automação de projetos, fornecendo suporte para a integração com o
+                        Maven.
+                        Leiningen lida com o gerenciamento de pacotes do projeto e dependências e é configurado usando
+                        código Clojure.</p>
+                    <p>Como a maioria dos outros Lisps, a sintaxe da linguagem Clojure é construída em expressões
+                        simbólicas
+                        que são primeiramente analisadas ​​em estruturas de dados por um leitor, antes de serem
+                        efetivamente
+                        compiladas. O leitor da linguagem Clojure suporta a sintaxe literal para mapas, conjuntos e
+                        vetores,
+                        além de listas, e estes são compilados para as estruturas citadas diretamente<a
+                            href="#n11"><sup>[11]</sup></a>. Clojure é um Lisp-1 e não se destina a ser um código
+                        compatível
+                        com outros dialetos da linguagem Lisp, uma vez que utiliza o seu próprio conjunto de estruturas
+                        de
+                        dados não compatíveis com outros Lisps.</p>
+                </div>
+                <div id="popularidade">
+                    <h3>Plataformas e popularidade</h3>
+                    <hr>
+                    <p>A plataforma primária da linguagem Clojure é a JVM, mas existem outras implementações. As mais
+                        notáveis
+                        entre elas são a ClojureScript<a href="#n4"><sup>[4]</sup></a>, que compila para JavaScript, e
+                        ClojureCLR<a href="#n3"><sup>[3]</sup></a>, uma conversão completa para a CLR interoperável com
+                        o
+                        ecossistema .NET. Uma pesquisa da comunidade Clojure com 1.060 entrevistados realizado em 2013
+                        descobriu
+                        que 47% dos inquiridos utilizaram tanto Clojure quanto ClojureScript ao trabalhar com a
+                        linguagem. Em
+                        2014 esse número tinha aumentado para 55%. Projetos populares usando ClojureScript incluem
+                        implementações da biblioteca React como Reagent e Om.</p>
+
+                    <p>Clojure também tem sido utilizado para a computação criativa, incluindo a arte visual, música,
+                        jogos e
+                        poesia.</p>
+
+                    <p>Variações da linguagem Clojure têm sido desenvolvidas para plataformas diferentes das indicadas
+                        acima:
+                    </p>
+                    <ul>
+                        <li>las3r, um subconjunto de Clojure que é executado no ActionScript Virtual Machine (a
+                            plataforma . .
+                            Adobe Flash Player)</li>
+                        <li>clojure-py, uma implementação do Clojure em Python puro</li>
+                        <li>rouge, uma implementação do Clojure rodando na YARV em Ruby</li>
+                        <li>CljPerl, uma implementação do Clojure em Perl.</li>
+                        <li>Pixie, um dialeto Lisp inspirado na linguagem Clojure e escrito em RPython.</li>
+                    </ul>
+                </div>
+
+                <div id="codigo">
+                    <h3>Exemplos de código</h3>
+                    <hr>
+                    <pre><code>
+                <p>Olá mundo</p>
+                (println "Olá Mundo!")
+            </pre></code>
+                    <pre>
+                <code>
+                <p>Definindo uma função:</p>
+                (defn quadrado [x]
+                  (* x x))
+                </code>
+                </pre>
+                    <pre>
+                    <p>"Olá, mundo" visual chamando a biblioteca Java Swing:</p>
+                    <code>
+                        (javax.swing.JOptionPane/showMessageDialog nil "Olá Mundo")
+                        
+                        ; Unicode (Olá 世 ("Mundo") usando o suporte para ideogramas):
+                        (println (str "Olá, " \u4e16)) ; exibindo no console
+                        (javax.swing.JOptionPane/showMessageDialog nil (str "Olá, " \u4e16 "!")) ; Usando swing (modo gráfico)
+                        
+                        ; Um gerador de números únicos thread-safe:
+                        (def i (atom 0))
+                        
+                        (defn generate-unique-id
+                          "Retorna uma identificação numérica distinta para cada chamada."
+                          (swap! i inc))
+                        
+                    </code>
+                </pre>
+                    <pre>
+                <p>
+                    Uma subclasse anônima de java.io.Writer que não escreve qualquer coisa, e uma macro para silenciar todas as impressões internamente:
+                </p>
+                <code>
+                    (def bit-bucket-writer
+                  (proxy [java.io.Writer]
+                    (write [buf] nil)
+                    (close nil)
+                    (flush nil)))
+                
+                (defmacro noprint
+                  "Executa todas as expressões enviadas mas silencia qualquer impressão para o *out*"
+                  [& forms]
+                  `(binding [*out* bit-bucket-writer]
+                     ~@forms))
+                
+                (noprint
+                  (println "Olá, ninguém!"))
+                </code>
+               </pre>
+
+
+                    <pre>
+                <p>10 threads manipulando uma estrutura de dados comum, que consiste de 100 vetores cada um contendo 10
+                    números únicos (inicialmente sequenciais). Cada thread em seguida, seleciona repetidamente duas posições
+                    aleatórias em dois vetores aleatórios e inverte sua posição. Todas as alterações nos vetores ocorrem em
+                    transações, fazendo uso de sistema de memória transacional da linguagem.</p>
+                    <code>(defn run [nvecs nitems nthreads niters]
+                        (let [vec-refs (-> (range (* nvecs nitems))
+                        (partition nitems)
+                        (map (comp ref vec)) vec)
+                        swap #(let [v1 (rand-int nvecs)
+                        v2 (rand-int nvecs)
+                        i1 (rand-int nitems)
+                        i2 (rand-int nitems)]
+                        (dosync
+                        (let [tmp (nth @(vec-refs v1) i1)]
+                        (alter (vec-refs v1) assoc i1 (nth @(vec-refs v2) i2))
+                        (alter (vec-refs v2) assoc i2 tmp))))
+                        report #(let [derefed (map deref vec-refs)]
+                        (prn derefed)
+                        (println "Distinct:" (-> derefed
+                        (apply concat)
+                        distinct
+                        count)))]
+                        (report)
+                        (dorun (apply pcalls (repeat nthreads #(dotimes [_ niters] (swap)))))
+                        (report)))
+            
+                        (run 100 10 10 100000)</code> 
+            </pre>
+
+
+                    </code></pre>
+                </div>
+            </div>
+
+
+            <div class="anchors">
+                <h2>Neste Artigo</h2>
+                <ul>
+                    <li><a href="#">Âncoras</a></li>
+                </ul>
+                <h2>Referencias</h2>
+                <ol>
+                    <li><cite> «Clojure inventor Hickey now aims for Android». InfoWorld. Consultado em 19 de fevereiro
+                            de
+                            2016</cite></li>
+                </ol>
+                <h5>História e processo de desenvolvimento</h5>
+                <ol>
+                    <li><cite> «Clojure inventor Hickey now aims for Android». InfoWorld. Consultado em 19 de fevereiro
+                            de
+                            2016</cite></li>
+                </ol>
+                <h5>Filosofia do design</h5>
+                <ol>
+                    <li><cite> «Clojure inventor Hickey now aims for Android». InfoWorld. Consultado em 19 de fevereiro
+                            de
+                            2016</cite></li>
+                </ol>
+                <h5>Características</h5>
+                <ol>
+                    <li><cite> «Clojure inventor Hickey now aims for Android». InfoWorld. Consultado em 19 de fevereiro
+                            de
+                            2016</cite></li>
+                </ol>
+                <h5>Plataformas e popularidade</h5>
+                <ol>
+                    <li><cite> «Clojure inventor Hickey now aims for Android». InfoWorld. Consultado em 19 de fevereiro
+                            de
+                            2016</cite></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="footer">
+
+        </div>
+</body>
+
+</html>
